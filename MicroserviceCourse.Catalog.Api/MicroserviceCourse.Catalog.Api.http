@@ -1,0 +1,9 @@
+#test ederken kullanýlacak http requestlerini buraya ekleyebilirsiniz postman'a ihtiyaç duymadan buradan request gönderebiliriz.#
+
+
+@MicroserviceCourse.Catalog.Api_HostAddress = http://localhost:5225
+
+GET {{MicroserviceCourse.Catalog.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
