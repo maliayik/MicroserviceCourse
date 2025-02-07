@@ -1,6 +1,7 @@
-﻿using MicroserviceCourse.Catalog.Api.Repositories;
+﻿using MicroserviceCourse.Catalog.Api.Features.Categories;
+using MicroserviceCourse.Catalog.Api.Repositories;
 
-namespace MicroserviceCourse.Catalog.Api.Features.Categories
+namespace MicroserviceCourse.Catalog.Api.Features.Courses
 {
     public class Course : BaseEntity
     {
@@ -12,6 +13,6 @@ namespace MicroserviceCourse.Catalog.Api.Features.Categories
         public DateTime Created { get; set; }
         public Guid CategoryId { get; set; }
         public Category Category { get; set; } = default!;
-
+        public Feature Feature { get; set; } = default!;
     }
 }
