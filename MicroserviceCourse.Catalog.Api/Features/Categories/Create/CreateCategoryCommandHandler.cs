@@ -33,7 +33,7 @@ namespace MicroserviceCourse.Catalog.Api.Features.Categories.Create
 
             await context.SaveChangesAsync(cancellationToken);
 
-            return ServiceResult<CreateCategoryResponse>.SuccessAsCreated(new CreateCategoryResponse(category.Id),"<endpoint yazılınca doldurulacak>");
+            return ServiceResult<CreateCategoryResponse>.SuccessAsCreated(new CreateCategoryResponse(category.Id), "CreateCategoryGroupItemEndpoint");
         }
     }
 }
