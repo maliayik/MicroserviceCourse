@@ -14,6 +14,7 @@ builder.Services.AddCommonServiceExt(typeof(CatalogAssembly));
 
 var app = builder.Build();
 
+//minimal api's
 app.AddCategoryGroupEndpointExt();
 
 if (app.Environment.IsDevelopment())
