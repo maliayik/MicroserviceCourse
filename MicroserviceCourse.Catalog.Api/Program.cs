@@ -1,5 +1,10 @@
+
+using MediatR;
+using MicroserviceCourse.Catalog.Api.Features.Categories;
+using MicroserviceCourse.Catalog.Api.Features.Categories.Create;
 using MicroserviceCourse.Catalog.Api.Options;
 using MicroserviceCourse.Catalog.Api.Repositories;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +15,8 @@ builder.Services.AddDatabaseServiceExt();
 
 
 var app = builder.Build();
+
+app.AddCategoryGroupEndpointExt();
 
 if (app.Environment.IsDevelopment())
 {
