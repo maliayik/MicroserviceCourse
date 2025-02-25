@@ -2,6 +2,7 @@
 #RestClient
 
 @baseAddress = http://localhost:5225
+@categoryId=08dd5440-129f-a2c8-00ff-7ee97aa70000
 
 GET {{baseAddress}}/api/categories
 Accept: application/json
@@ -12,5 +13,7 @@ Content-Type: application/json
 {
   "name":"Category 1"
 }
-
+###
+GET {{baseAddress}}/api/categories/{{categoryId}}
+Accept: application/json
 ###
