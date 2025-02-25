@@ -1,9 +1,16 @@
 #test ederken kullanýlacak http requestlerini buraya ekleyebilirsiniz postman'a ihtiyaç duymadan buradan request gönderebiliriz.#
+#RestClient
 
+@baseAddress = http://localhost:5225
 
-@MicroserviceCourse.Catalog.Api_HostAddress = http://localhost:5225
-
-GET {{MicroserviceCourse.Catalog.Api_HostAddress}}/weatherforecast/
+GET {{baseAddress}}/api/categories
 Accept: application/json
+###
+POST {{baseAddress}}/api/categories
+Accept: application/json
+Content-Type: application/json
+{
+  "name":"Category 1"
+}
 
 ###
