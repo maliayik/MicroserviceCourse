@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
 using MicroserviceCourse.Catalog.Api.Features.Categories.Create;
 using MicroserviceCourse.Catalog.Api.Features.Categories.Dtos;
 using MicroserviceCourse.Catalog.Api.Repositories;
@@ -12,14 +13,14 @@ namespace MicroserviceCourse.Catalog.Api.Features.Categories.GetAll
 
     public class GetAllCategoryQuery : IRequest<ServiceResult<List<CategoryDto>>>;
 
-    public class GetAllCategoryQueryHandler(AppDbContext context)
+    public class GetAllCategoryQueryHandler(AppDbContext context,IMapper mapper)
         : IRequestHandler<GetAllCategoryQuery, ServiceResult<List<CategoryDto>>>
     {
         public async Task<ServiceResult<List<CategoryDto>>> Handle(GetAllCategoryQuery request,
             CancellationToken cancellationToken)
         {
-            var categories = await context.Categories.ToListAsync();
-            var categoryDtos = categories.Select(x => new CategoryDto(x.Id, x.Name)).ToList();
+            var categories = await context.Categories.ToListAsync(cancellationToken);
+            var categoryDtos = mapper.Map<List<CategoryDto>>(categories);
 
             return ServiceResult<List<CategoryDto>>.SuccessAsOk(categoryDtos);
         }
