@@ -1,7 +1,4 @@
-﻿using MediatR;
-using MicroserviceCourse.Shared.Extensions;
-using MicroserviceCourse.Shared.Filters;
-using Microsoft.AspNetCore.Mvc;
+﻿using MicroserviceCourse.Shared.Filters;
 
 namespace MicroserviceCourse.Catalog.Api.Features.Categories.Create
 {

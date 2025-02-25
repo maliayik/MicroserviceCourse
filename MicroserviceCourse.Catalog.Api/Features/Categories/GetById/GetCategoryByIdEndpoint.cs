@@ -1,14 +1,4 @@
-﻿using System.Net;
-using AutoMapper;
-using MediatR;
-using MicroserviceCourse.Catalog.Api.Features.Categories.Dtos;
-using MicroserviceCourse.Catalog.Api.Features.Categories.GetAll;
-using MicroserviceCourse.Catalog.Api.Repositories;
-using MicroserviceCourse.Shared;
-using MicroserviceCourse.Shared.Extensions;
-using Microsoft.EntityFrameworkCore;
-
-namespace MicroserviceCourse.Catalog.Api.Features.Categories.GetById
+﻿namespace MicroserviceCourse.Catalog.Api.Features.Categories.GetById
 {
     public record GetCategoryByIdQuery(Guid Id) : IRequestByServiceResult<CategoryDto>;
 

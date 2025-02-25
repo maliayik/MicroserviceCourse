@@ -1,11 +1,4 @@
-﻿using System.Net;
-using MassTransit;
-using MediatR;
-using MicroserviceCourse.Catalog.Api.Repositories;
-using MicroserviceCourse.Shared;
-using Microsoft.EntityFrameworkCore;
-
-namespace MicroserviceCourse.Catalog.Api.Features.Categories.Create
+﻿namespace MicroserviceCourse.Catalog.Api.Features.Categories.Create
 {
     //Eğer ORM aracımızı değiştirmek istersek repository design pattern kullanmamız gerekir.
     //Bu kodumuzda EFCore orm aracını değiştirmiyeceğimiz için handler sınıfında dbcontext kullanabiliriz.
