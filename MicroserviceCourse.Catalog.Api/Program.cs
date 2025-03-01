@@ -1,5 +1,6 @@
 using MicroserviceCourse.Catalog.Api;
 using MicroserviceCourse.Catalog.Api.Features.Categories;
+using MicroserviceCourse.Catalog.Api.Features.Courses;
 using MicroserviceCourse.Catalog.Api.Options;
 using MicroserviceCourse.Catalog.Api.Repositories;
 using MicroserviceCourse.Shared.Extensions;
@@ -16,6 +17,7 @@ var app = builder.Build();
 
 //minimal api's
 app.AddCategoryGroupEndpointExt();
+app.AddCourseGroupEndpointExt();
 
 if (app.Environment.IsDevelopment())
 {
