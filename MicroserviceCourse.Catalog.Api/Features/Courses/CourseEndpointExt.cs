@@ -1,5 +1,6 @@
 ﻿using MicroserviceCourse.Catalog.Api.Features.Categories.Create;
 using MicroserviceCourse.Catalog.Api.Features.Courses.Create;
+using MicroserviceCourse.Catalog.Api.Features.Courses.Delete;
 using MicroserviceCourse.Catalog.Api.Features.Courses.GetAll;
 using MicroserviceCourse.Catalog.Api.Features.Courses.GetById;
 using MicroserviceCourse.Catalog.Api.Features.Courses.Update;
@@ -17,7 +18,8 @@ namespace MicroserviceCourse.Catalog.Api.Features.Courses
                 .CreateCourseGroupItemEndpoint()
                 .GetAllCourseGroupItemEndpoint()
                 .GetByIdCourseGroupItemEndpoint()
-                .UpdateCourseGroupItemEndpoint();
+                .UpdateCourseGroupItemEndpoint()
+                .DeleteCourseGroupItemEndpoint();
         }
     }
 }

@@ -49,3 +49,7 @@ Accept: application/json
 GET {{baseAddress}}/api/courses/{{courseId}}
 Accept: application/json
 ###
+###
+Delete {{baseAddress}}/api/courses/{{courseId}}
+Accept: application/json
+###
