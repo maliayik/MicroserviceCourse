@@ -1,6 +1,7 @@
 ﻿using MicroserviceCourse.Catalog.Api.Features.Categories.Create;
 using MicroserviceCourse.Catalog.Api.Features.Courses.Create;
 using MicroserviceCourse.Catalog.Api.Features.Courses.GetAll;
+using MicroserviceCourse.Catalog.Api.Features.Courses.GetById;
 
 namespace MicroserviceCourse.Catalog.Api.Features.Courses
 {
@@ -13,7 +14,8 @@ namespace MicroserviceCourse.Catalog.Api.Features.Courses
         {
             app.MapGroup("api/courses").WithTags("Courses")
                 .CreateCourseGroupItemEndpoint()
-                .GetAllCourseGroupItemEndpoint();
+                .GetAllCourseGroupItemEndpoint()
+                .GetByIdCourseGroupItemEndpoint();
         }
     }
 }
