@@ -31,7 +31,8 @@ namespace MicroserviceCourse.Catalog.Api.Features.Courses.Delete
             group.MapDelete("/{id:guid}",
                     async (IMediator mediator, Guid id) =>
                         (await mediator.Send(new DeleteCourseCommand(id))).ToGenericResult())
-                .WithName("DeleteCourse");
+                .WithName("DeleteCourse")
+                .MapToApiVersion(1, 0);
 
             return group;
         }

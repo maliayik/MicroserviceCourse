@@ -28,7 +28,9 @@
         {
             //burada id nin guid olması gerektiğini belirtiyoruz bu sayede requesti güvenli hale getirmiş oluyoruz ekstra validasyon yapmamıza gerek kalmıyor. (.Net guid hariç değerleri kabul etmiyor.)
             group.MapGet("/{id:guid}",
-                async (IMediator mediator, Guid id) => (await mediator.Send(new GetCategoryByIdQuery(id))).ToGenericResult()).WithName("GetByIdCategory");
+                async (IMediator mediator, Guid id) => (await mediator.Send(new GetCategoryByIdQuery(id))).ToGenericResult())
+                .MapToApiVersion(1,0)
+                .WithName("GetByIdCategory");
 
             return group;
         }

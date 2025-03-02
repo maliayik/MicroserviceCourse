@@ -30,8 +30,10 @@ namespace MicroserviceCourse.Catalog.Api.Features.Courses.GetAll
     {
         public static RouteGroupBuilder GetAllCourseGroupItemEndpoint(this RouteGroupBuilder group)
         {
-            group.MapGet("/", async (IMediator mediator) => (await mediator.Send(new GetAllCoursesQuery())).ToGenericResult()).WithName("GetAllCourses")
-                 .AddEndpointFilter<ValidationFilter<CreateCourseCommand>>();
+            group.MapGet("/", async (IMediator mediator) => (await mediator.Send(new GetAllCoursesQuery())).ToGenericResult())
+                .WithName("GetAllCourses")
+                .MapToApiVersion(1, 0)
+                .AddEndpointFilter<ValidationFilter<CreateCourseCommand>>();
 
             return group;
         }

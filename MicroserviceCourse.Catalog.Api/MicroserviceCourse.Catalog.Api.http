@@ -6,21 +6,21 @@
 @courseId=08dd58a4-a024-3b76-00ff-7ee97aa70000
 @userId=7aa70000-7ee9-00ff-d127-08dd596e0e62
 
-GET {{baseAddress}}/api/categories
+GET {{baseAddress}}/api/v1.0/categories
 Accept: application/json
 ###
-POST {{baseAddress}}/api/categories
+POST {{baseAddress}}/api/v1/categories
 Accept: application/json
 Content-Type: application/json
 {
   "name":"Category 1"
 }
 ###
-GET {{baseAddress}}/api/categories/{{categoryId}}
+GET {{baseAddress}}/api/v1/categories/{{categoryId}}
 Accept: application/json
 ###
 
-POST {{baseAddress}}/api/courses
+POST {{baseAddress}}/api/v1/courses
 Accept: application/json
 Content-Type: application/json
 {
@@ -32,7 +32,7 @@ Content-Type: application/json
 }
 ###
 ###
-PUT {{baseAddress}}/api/courses
+PUT {{baseAddress}}/api/v1/courses
 Accept: application/json
 Content-Type: application/json
 {
@@ -44,17 +44,17 @@ Content-Type: application/json
   "categoryId": "{{categoryId}}"
 }
 ###
-GET {{baseAddress}}/api/courses
+GET {{baseAddress}}/api/v1/courses
 Accept: application/json
 ###
-GET {{baseAddress}}/api/courses/{{courseId}}
-Accept: application/json
-###
-###
-Delete {{baseAddress}}/api/courses/{{courseId}}
+GET {{baseAddress}}/api/v1/courses/{{courseId}}
 Accept: application/json
 ###
 ###
-GET {{baseAddress}}/api/courses/user/{{userId}}
+Delete {{baseAddress}}/api/v1/courses/{{courseId}}
+Accept: application/json
+###
+###
+GET {{baseAddress}}/api/v1/courses/user/{{userId}}
 Accept: application/json
 ###

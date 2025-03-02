@@ -26,7 +26,9 @@ namespace MicroserviceCourse.Catalog.Api.Features.Courses.GetAllByUserId
     {
         public static RouteGroupBuilder GetByUserIdCourseGroupItemEndpoint(this RouteGroupBuilder group)
         {
-            group.MapGet("/user/{userId:guid}", async (IMediator mediator, Guid userId) => (await mediator.Send(new GetCourseByUserIdQuery(userId))).ToGenericResult()).WithName("GetByUserIdCourse");
+            group.MapGet("/user/{userId:guid}", async (IMediator mediator, Guid userId) => (await mediator.Send(new GetCourseByUserIdQuery(userId))).ToGenericResult())
+                .WithName("GetByUserIdCourse")
+                .MapToApiVersion(1, 0);
 
             return group;
         }

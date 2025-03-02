@@ -12,6 +12,7 @@ namespace MicroserviceCourse.Catalog.Api.Features.Courses.Create
         {
             group.MapPost("/", async (CreateCourseCommand command, IMediator mediator) => (await mediator.Send(command)).ToGenericResult()).WithName("CreateCourse")
                 .Produces<Guid>(StatusCodes.Status201Created)
+                .MapToApiVersion(1, 0)
                 .AddEndpointFilter<ValidationFilter<CreateCourseCommand>>();
 
             return group;
