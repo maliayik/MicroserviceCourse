@@ -15,6 +15,12 @@ builder.Services.AddCommonServiceExt(typeof(CatalogAssembly));
 
 var app = builder.Build();
 
+//seed data, thread bloklanmadan çalýþtýrýlacak
+app.AddSeedDataExt().ContinueWith(x =>
+{
+    Console.WriteLine(x.IsFaulted ? x.Exception?.Message : "Seed data has been saved succesfully");
+});
+
 //minimal api's
 app.AddCategoryGroupEndpointExt();
 app.AddCourseGroupEndpointExt();
