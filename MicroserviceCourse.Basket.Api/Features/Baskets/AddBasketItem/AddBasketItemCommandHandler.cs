@@ -35,6 +35,7 @@ namespace MicroserviceCourse.Basket.Api.Features.Baskets.AddBasketItem
 
             if (existingItem is not null)
             {
+                // TODO : ihtiyaca göre business kuralları eklenebilir.
                 currentBasket.BasketItems.Remove(existingItem);
             }
 
