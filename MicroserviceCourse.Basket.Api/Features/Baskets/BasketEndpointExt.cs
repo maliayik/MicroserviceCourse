@@ -1,5 +1,6 @@
 ﻿using Asp.Versioning.Builder;
 using MicroserviceCourse.Basket.Api.Features.Baskets.AddBasketItem;
+using MicroserviceCourse.Basket.Api.Features.Baskets.ApplyDiscountCoupon;
 using MicroserviceCourse.Basket.Api.Features.Baskets.DeleteBasketItem;
 using MicroserviceCourse.Basket.Api.Features.Baskets.GetBasket;
 
@@ -13,7 +14,8 @@ namespace MicroserviceCourse.Basket.Api.Features.Baskets
                 .WithApiVersionSet(apiVersionSet)
                 .AddBasketItemGroupItemEndpoint()
                 .DeleteBasketItemGroupItemEndpoint()
-                .GetBasketGroupItemEndpoint();
+                .GetBasketGroupItemEndpoint()
+                .ApplyDiscountCouponGroupItemEndpoint();
 
         }
     }
