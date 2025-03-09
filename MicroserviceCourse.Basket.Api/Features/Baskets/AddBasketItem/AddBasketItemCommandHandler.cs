@@ -4,15 +4,15 @@ using MicroserviceCourse.Basket.Api.Dtos;
 using MicroserviceCourse.Shared;
 using Microsoft.Extensions.Caching.Distributed;
 using System.Text.Json;
+using MicroserviceCourse.Shared.Services;
 
 namespace MicroserviceCourse.Basket.Api.Features.Baskets.AddBasketItem
 {
-    public class AddBasketItemCommandHandler(IDistributedCache distributedCache) : IRequestHandler<AddBasketItemCommand, ServiceResult>
+    public class AddBasketItemCommandHandler(IDistributedCache distributedCache,IIdentityService identityService) : IRequestHandler<AddBasketItemCommand, ServiceResult>
     {
         public async Task<ServiceResult> Handle(AddBasketItemCommand request, CancellationToken cancellationToken)
         {
-            // TODO : daha sonra token tarafından gelen kullanıcı id alınacak
-            Guid userID = Guid.NewGuid();
+            Guid userID = identityService.GetUserId;
 
             var cacheKey = string.Format(BasketConst.BasketCacheKey, userID);
 

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using MicroserviceCourse.Shared.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MicroserviceCourse.Shared.Extensions
@@ -24,7 +25,8 @@ namespace MicroserviceCourse.Shared.Extensions
 
             services.AddFluentValidationAutoValidation();
             services.AddValidatorsFromAssemblyContaining(assembly);
-           
+            services.AddScoped<IIdentityService, IdentityServiceFake>();
+
             services.AddAutoMapper(assembly);
 
             return services;
