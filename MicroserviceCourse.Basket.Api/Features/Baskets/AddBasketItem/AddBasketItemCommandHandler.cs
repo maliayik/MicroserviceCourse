@@ -31,15 +31,15 @@ namespace MicroserviceCourse.Basket.Api.Features.Baskets.AddBasketItem
 
             currentBasket = JsonSerializer.Deserialize<BasketDto>(basketAsString);
 
-            var existingItem = currentBasket.BasketItems.FirstOrDefault(x => x.Id == request.CourseId);
+            var existingItem = currentBasket.Items.FirstOrDefault(x => x.Id == request.CourseId);
 
             if (existingItem is not null)
             {
                 // TODO : ihtiyaca göre business kuralları eklenebilir.
-                currentBasket.BasketItems.Remove(existingItem);
+                currentBasket.Items.Remove(existingItem);
             }
 
-            currentBasket.BasketItems.Add(newBasketItem);
+            currentBasket.Items.Add(newBasketItem);
 
             await CreateCacheAsync(currentBasket, cacheKey, cancellationToken);
 
