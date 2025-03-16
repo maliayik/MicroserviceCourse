@@ -9,8 +9,8 @@ Accept: application/json
 Content-Type: application/json
 {
   "courseId": "{{courseID}}",
-  "courseName": "xxxss",
-  "coursePrice": 30
+  "courseName": "new",
+  "coursePrice": 15
 }
 ###
 DELETE {{baseAddress}}/api/v1/baskets/item/{{courseID}}
