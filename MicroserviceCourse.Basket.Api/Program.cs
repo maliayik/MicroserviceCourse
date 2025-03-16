@@ -8,6 +8,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCommonServiceExt(typeof(BasketAssembly));
 builder.Services.AddVersioingExt();
+builder.Services.AddScoped<BasketService>();
 
 builder.Services.AddStackExchangeRedisCache(options =>
 {

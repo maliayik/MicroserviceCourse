@@ -14,25 +14,23 @@ namespace MicroserviceCourse.Basket.Api.Features.Baskets.RemoveDiscountCoupon
 {
     public record RemoveDiscountCouponCommand : IRequestByServiceResult;
 
-    public class RemoveDiscountCouponCommandHandler(IIdentityService identityService, IDistributedCache distributedCache) : IRequestHandler<RemoveDiscountCouponCommand, ServiceResult>
+    public class RemoveDiscountCouponCommandHandler(BasketService basketService) : IRequestHandler<RemoveDiscountCouponCommand, ServiceResult>
     {
         public async Task<ServiceResult> Handle(RemoveDiscountCouponCommand request, CancellationToken cancellationToken)
         {
-            var cacheKey = string.Format(BasketConst.BasketCacheKey, identityService.GetUserId);
+            var basketAsJson = await  basketService.GetBasketFromCache(cancellationToken);
 
-            var basketAsString = await distributedCache.GetStringAsync(cacheKey, cancellationToken);
-
-            if (string.IsNullOrEmpty(basketAsString))
+            if (string.IsNullOrEmpty(basketAsJson))
             {
                 return ServiceResult<BasketDto>.Error("Basket not found", HttpStatusCode.NotFound);
             }
 
-            var basket = JsonSerializer.Deserialize<Data.Basket>(basketAsString);
+            var basket = JsonSerializer.Deserialize<Data.Basket>(basketAsJson);
 
             basket!.ClearDiscount();
 
-            basketAsString = JsonSerializer.Serialize(basket);
-            await distributedCache.SetStringAsync(cacheKey, basketAsString, cancellationToken);
+            basketAsJson = JsonSerializer.Serialize(basket);
+            await basketService.CreateBasketCacheAsync(basket, cancellationToken);
 
             return ServiceResult.SuccessAsNoContent();
         }
