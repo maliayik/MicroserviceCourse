@@ -1,4 +1,6 @@
+using System.Runtime.CompilerServices;
 using MicroserviceCourse.Discount.Api;
+using MicroserviceCourse.Discount.Api.Features.Discounts;
 using MicroserviceCourse.Discount.Api.Options;
 using MicroserviceCourse.Discount.Api.Repositories;
 
@@ -16,6 +18,8 @@ builder.Services.AddVersioingExt();
 
 
 var app = builder.Build();
+
+app.AddDiscountGroupEndpointExt(app.AddVersionSetExt());
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

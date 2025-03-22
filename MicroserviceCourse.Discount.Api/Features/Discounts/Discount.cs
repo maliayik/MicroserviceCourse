@@ -1,6 +1,4 @@
-﻿using MicroserviceCourse.Discount.Api.Repositories;
-
-namespace MicroserviceCourse.Discount.Api.Features.Discounts
+﻿namespace MicroserviceCourse.Discount.Api.Repositories
 {
     public class Discount : BaseEntity
     {

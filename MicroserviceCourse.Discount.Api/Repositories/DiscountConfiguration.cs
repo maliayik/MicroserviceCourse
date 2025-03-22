@@ -2,9 +2,9 @@
 using MongoDB.EntityFrameworkCore.Extensions;
 namespace MicroserviceCourse.Discount.Api.Repositories
 {
-    public class DiscountConfiguration : IEntityTypeConfiguration<Features.Discounts.Discount>
+    public class DiscountConfiguration : IEntityTypeConfiguration<Discount>
     {
-        public void Configure(EntityTypeBuilder<Features.Discounts.Discount> builder)
+        public void Configure(EntityTypeBuilder<Discount> builder)
         {
             builder.ToCollection("discounts");
             builder.HasKey(x => x.Id);
