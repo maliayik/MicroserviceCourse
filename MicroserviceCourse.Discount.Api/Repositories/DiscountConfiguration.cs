@@ -8,6 +8,7 @@ namespace MicroserviceCourse.Discount.Api.Repositories
         {
             builder.ToCollection("discounts");
             builder.HasKey(x => x.Id);
+            builder.Property(x => x.Id).HasElementName("_id");
             builder.Property(x => x.Id).ValueGeneratedNever();
             builder.Property(x => x.Code).HasElementName("code").HasMaxLength(10);
             builder.Property(x => x.Rate).HasElementName("rate");
