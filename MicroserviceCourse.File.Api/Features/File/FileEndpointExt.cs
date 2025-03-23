@@ -1,4 +1,5 @@
 ﻿using Asp.Versioning.Builder;
+using MicroserviceCourse.File.Api.Features.File.Delete;
 using MicroserviceCourse.File.Api.Features.File.Upload;
 
 namespace MicroserviceCourse.File.Api.Features.File
@@ -9,7 +10,8 @@ namespace MicroserviceCourse.File.Api.Features.File
         {
             app.MapGroup("api/v{version:apiVersion}/files").WithTags("files")
                 .WithApiVersionSet(apiVersionSet)
-                .UploadFileGroupItemEndpoint();
+                .UploadFileGroupItemEndpoint()
+                .DeleteFileGroupItemEndpoint();
         }
     }
 }
