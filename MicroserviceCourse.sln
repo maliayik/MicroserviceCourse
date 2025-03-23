@@ -25,6 +25,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "discount", "discount", "{7C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceCourse.Discount.Api", "MicroserviceCourse.Discount.Api\MicroserviceCourse.Discount.Api.csproj", "{1E866506-23E5-4E20-85ED-FBD8DF0D2F2D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "file", "file", "{B6E46F7D-AACC-4B1E-927E-91D237C4A9B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceCourse.File.Api", "MicroserviceCourse.File.Api\MicroserviceCourse.File.Api.csproj", "{DEA4D8AF-435B-4F32-BF22-DEBE97C10938}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,10 @@ Global
 		{1E866506-23E5-4E20-85ED-FBD8DF0D2F2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E866506-23E5-4E20-85ED-FBD8DF0D2F2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E866506-23E5-4E20-85ED-FBD8DF0D2F2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEA4D8AF-435B-4F32-BF22-DEBE97C10938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEA4D8AF-435B-4F32-BF22-DEBE97C10938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEA4D8AF-435B-4F32-BF22-DEBE97C10938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEA4D8AF-435B-4F32-BF22-DEBE97C10938}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,5 +73,7 @@ Global
 		{5F88A1DF-F6EE-489C-BDC9-7A6BB776EC67} = {34F0E87A-919F-4E46-8008-5BBEF61A658C}
 		{7C02CC2F-EB4E-48F1-96D1-23A77516A882} = {77B80658-D57D-45EE-987A-0FD7B7C94C96}
 		{1E866506-23E5-4E20-85ED-FBD8DF0D2F2D} = {7C02CC2F-EB4E-48F1-96D1-23A77516A882}
+		{B6E46F7D-AACC-4B1E-927E-91D237C4A9B0} = {77B80658-D57D-45EE-987A-0FD7B7C94C96}
+		{DEA4D8AF-435B-4F32-BF22-DEBE97C10938} = {B6E46F7D-AACC-4B1E-927E-91D237C4A9B0}
 	EndGlobalSection
 EndGlobal
