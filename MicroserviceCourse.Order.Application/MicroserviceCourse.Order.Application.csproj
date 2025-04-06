@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MicroserviceCourse.Order.Domain\MicroserviceCourse.Order.Domain.csproj" />
+      <ProjectReference Include="..\MicroserviceCourse.Shared\MicroserviceCourse.Shared.csproj" />
+    </ItemGroup>
+
+</Project>

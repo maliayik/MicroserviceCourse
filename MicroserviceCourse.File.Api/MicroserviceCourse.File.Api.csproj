@@ -12,6 +12,8 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\MicroserviceCourse.Order.Application\MicroserviceCourse.Order.Application.csproj" />
+      <ProjectReference Include="..\MicroserviceCourse.Order.Persistence\MicroserviceCourse.Order.Persistence.csproj" />
       <ProjectReference Include="..\MicroserviceCourse.Shared\MicroserviceCourse.Shared.csproj" />
     </ItemGroup>
 
