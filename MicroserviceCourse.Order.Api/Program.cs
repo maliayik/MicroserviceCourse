@@ -1,4 +1,6 @@
+using MicroserviceCourse.Order.Application.Contracts.Repositories;
 using MicroserviceCourse.Order.Persistence;
+using MicroserviceCourse.Order.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +13,7 @@ builder.Services.AddDbContext<AppDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer"));
 });
+builder.Services.AddScoped(typeof(IGenericRepository<,>), typeof(GenericRepository<,>));
 
 var app = builder.Build();
 
@@ -24,4 +27,3 @@ app.UseHttpsRedirection();
 
 
 app.Run();
-
