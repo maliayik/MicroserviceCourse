@@ -15,7 +15,7 @@ public static class CreateOrderEndpoint
                 (await mediator.Send(command)).ToGenericResult())
             .WithName("CreateOrder")
             .MapToApiVersion(1, 0)
-            .AddEndpointFilter<ValidationFilter<CreateOrderCommand>>();
+            .AddEndpointFilter<ValidationFilter<CreateOrderCommandValidator>>();
 
         return group;
     }
