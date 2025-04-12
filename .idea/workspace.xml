@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc64ead4-5624-48f2-b346-5fe93625c15f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/MicroserviceCourse.Order.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/MicroserviceCourse.Order.Api.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/Endpoints/Orders/CreateOrderEndpoint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/Endpoints/Orders/OrderEndpointExt.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Persistence/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Persistence/AppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,12 +1,16 @@
+using MicroserviceCourse.Order.Api.Endpoints.Orders;
 using MicroserviceCourse.Order.Application.Contracts.Repositories;
+using MicroserviceCourse.Order.Application.Contracts.UnitOfWorks;
 using MicroserviceCourse.Order.Persistence;
 using MicroserviceCourse.Order.Persistence.Repositories;
+using MicroserviceCourse.Order.Persistence.UnitOfWork;
+using MicroserviceCourse.Shared.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 builder.Services.AddOpenApi();
 
 builder.Services.AddDbContext<AppDbContext>(option =>
@@ -14,13 +18,20 @@ builder.Services.AddDbContext<AppDbContext>(option =>
     option.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer"));
 });
 builder.Services.AddScoped(typeof(IGenericRepository<,>), typeof(GenericRepository<,>));
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddVersioingExt();
 
 var app = builder.Build();
+
+app.AddOrderGroupEndpointExt(app.AddVersionSetExt());
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
