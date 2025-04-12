@@ -1,8 +1,10 @@
 using MicroserviceCourse.Order.Domain.Entities;
+using MicroserviceCourse.Shared;
 
 namespace MicroserviceCourse.Order.Application.Features.Orders.Create;
 
-public record CreateOrderCommand(float? DiscountRate, AddressDto Address, PaymentDto Payment, List<OrderItemDto> Items);
+public record CreateOrderCommand(float? DiscountRate, AddressDto Address, PaymentDto Payment, List<OrderItemDto> Items)
+    : IRequestByServiceResult;
 
 public record AddressDto(string Province, string Street, string District, string ZipCode, string Line);
 

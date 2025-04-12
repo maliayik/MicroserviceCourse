@@ -31,7 +31,7 @@ public class GenericRepository<TId, TEntity>(AppDbContext context)
     public ValueTask<TEntity?> GetByIdAsync(TId id) => _dbSet.FindAsync(id);
 
 
-    public void AddAsync(TEntity entity) => _dbSet.Add(entity);
+    public void Add(TEntity entity) => _dbSet.Add(entity);
 
 
     public void Update(TEntity entity) => _dbSet.Update(entity);

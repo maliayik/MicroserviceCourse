@@ -17,7 +17,7 @@ public interface IGenericRepository<TId, TEntity> where TId : struct where TEnti
 
     ValueTask<TEntity?> GetByIdAsync(TId id);
 
-    void AddAsync(TEntity entity);
+    void Add(TEntity entity);
 
     void Update(TEntity entity);
 
