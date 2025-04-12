@@ -1,6 +1,7 @@
 using System.Net;
 using MediatR;
 using MicroserviceCourse.Order.Application.Contracts.Repositories;
+using MicroserviceCourse.Order.Application.Contracts.UnitOfWorks;
 using MicroserviceCourse.Order.Domain.Entities;
 using MicroserviceCourse.Shared;
 using MicroserviceCourse.Shared.Services;
@@ -8,19 +9,19 @@ using MicroserviceCourse.Shared.Services;
 namespace MicroserviceCourse.Order.Application.Features.Orders.Create;
 
 public class CreateOrderCommandHandler(
-    IGenericRepository<Guid, Domain.Entities.Order> orderRepository,
+    IOrderRepository orderRepository,
     IGenericRepository<int, Address> addressRepository,
-    IIdentityService identityService)
+    IIdentityService identityService,
+    IUnitOfWork unitOfWork)
     : IRequestHandler<CreateOrderCommand, ServiceResult>
 {
-    public Task<ServiceResult> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
+    public async Task<ServiceResult> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
     {
         if (!request.Items.Any())
-            return Task.FromResult(ServiceResult.Error("Order items not found", "Orders must have at least one item",
+            return (ServiceResult.Error("Order items not found", "Orders must have at least one item",
                 HttpStatusCode.BadRequest));
 
-
-        //TODO: transaction başlatılacak
+        unitOfWork.BeginTransactionAsync();
         var newAddress = new Address()
         {
             Province = request.Address.Province,
@@ -39,15 +40,19 @@ public class CreateOrderCommandHandler(
             order.AddOrderItem(orderItem.ProductId, orderItem.ProductName, orderItem.UnitPrice);
         }
 
+        order.Address = newAddress;
         orderRepository.Add(order);
+        await unitOfWork.CommitAsync(cancellationToken);
 
-        //payment işlemleri yapılacak
+        //TODO:payment işlemleri yapılacak
 
         var paymentID = Guid.Empty;
         order.SetPaidStatus(paymentID);
 
         orderRepository.Update(order);
 
-        return Task.FromResult(ServiceResult.SuccessAsNoContent());
+        await unitOfWork.CommitAsync(cancellationToken);
+
+        return (ServiceResult.SuccessAsNoContent());
     }
 }
