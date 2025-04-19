@@ -19,4 +19,8 @@
       <ProjectReference Include="..\MicroserviceCourse.Order.Persistence\MicroserviceCourse.Order.Persistence.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="idea\httpRequests\http-client.env.json" />
+    </ItemGroup>
+
 </Project>

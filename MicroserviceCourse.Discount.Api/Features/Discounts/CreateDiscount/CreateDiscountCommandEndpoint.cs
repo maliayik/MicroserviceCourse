@@ -13,7 +13,7 @@ namespace MicroserviceCourse.Discount.Api.Features.Discounts.CreateDiscount
             group.MapPost("/", async (CreateDiscountCommand command, IMediator mediator) => (await mediator.Send(command)).ToGenericResult())
                 .WithName("CreateDiscount")
                 .MapToApiVersion(1, 0)
-                .AddEndpointFilter<ValidationFilter<CreateDiscountCommandValidator>>();
+                .AddEndpointFilter<ValidationFilter<CreateDiscountCommand>>();
 
             return group;
         }

@@ -1,4 +1,5 @@
 using MicroserviceCourse.Order.Api.Endpoints.Orders;
+using MicroserviceCourse.Order.Application;
 using MicroserviceCourse.Order.Application.Contracts.Repositories;
 using MicroserviceCourse.Order.Application.Contracts.UnitOfWorks;
 using MicroserviceCourse.Order.Persistence;
@@ -12,7 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddOpenApi();
-
+builder.Services.AddCommonServiceExt(typeof(OrderApplicationAssembly));
 builder.Services.AddDbContext<AppDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer"));

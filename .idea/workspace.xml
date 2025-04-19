@@ -5,9 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc64ead4-5624-48f2-b346-5fe93625c15f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/Endpoints/Orders/CreateOrderEndpoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/Endpoints/Orders/OrderEndpointExt.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/OrderApiAssembly.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Application/OrderApplicationAssembly.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d66cee1f-1a0e-4f66-bb97-4a791eb66dd5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d66cee1f-1a0e-4f66-bb97-4a791eb66dd5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/Endpoints/Orders/CreateOrderEndpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/Endpoints/Orders/CreateOrderEndpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/MicroserviceCourse.Order.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/MicroserviceCourse.Order.Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/MicroserviceCourse.Order.Api.http" beforeDir="false" afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/MicroserviceCourse.Order.Api.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Application/Features/Orders/Create/CreateOrderCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Application/Features/Orders/Create/CreateOrderCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Persistence/Migrations/20250412164954_InitialCreate.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Persistence/Migrations/20250412164954_InitialCreate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Persistence/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,23 +29,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2vdNqLBKScNrHof6xA7NEI2gtYP" />
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "section-order",
-    "last_opened_file_path": "C:/Users/PC/RiderProjects/MicroserviceCourse"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;section-order&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/RiderProjects/MicroserviceCourse&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlserver"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlserver&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
 </project>

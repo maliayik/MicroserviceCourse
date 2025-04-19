@@ -20,8 +20,7 @@ public class CreateOrderCommandHandler(
         if (!request.Items.Any())
             return (ServiceResult.Error("Order items not found", "Orders must have at least one item",
                 HttpStatusCode.BadRequest));
-
-        unitOfWork.BeginTransactionAsync();
+       
         var newAddress = new Address()
         {
             Province = request.Address.Province,

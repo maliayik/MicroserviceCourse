@@ -12,7 +12,7 @@ namespace MicroserviceCourse.Basket.Api.Features.Baskets.ApplyDiscountCoupon
             group.MapPut("item/apply-discount-coupon", async (ApplyDiscountCouponCommand command, IMediator mediator) => (await mediator.Send(command)).ToGenericResult())
                 .WithName("ApplyDiscountCoupon")
                 .MapToApiVersion(1, 0)
-                .AddEndpointFilter<ValidationFilter<ApplyDiscountCouponCommandValidator>>();
+                .AddEndpointFilter<ValidationFilter<ApplyDiscountCouponCommand>>();
 
             return group;
         }
