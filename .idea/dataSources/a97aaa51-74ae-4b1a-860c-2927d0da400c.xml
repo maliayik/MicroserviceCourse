@@ -17165,7 +17165,7 @@
     <column id="5627" parent="5608" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1(5)</SequenceIdentity>
+      <SequenceIdentity>1(9)</SequenceIdentity>
       <StoredType>int|0s</StoredType>
     </column>
     <column id="5628" parent="5608" name="ProductId">

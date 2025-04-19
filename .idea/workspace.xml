@@ -5,21 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc64ead4-5624-48f2-b346-5fe93625c15f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/OrderApiAssembly.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Application/OrderApplicationAssembly.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d66cee1f-1a0e-4f66-bb97-4a791eb66dd5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d66cee1f-1a0e-4f66-bb97-4a791eb66dd5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/Endpoints/Orders/GetOrderEndpoint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Application/Features/Orders/GetOrders/GetOrdersQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Application/Features/Orders/GetOrders/GetOrdersQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Application/Features/Orders/GetOrders/GetOrdersResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Application/Features/Orders/OrderMapping.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a97aaa51-74ae-4b1a-860c-2927d0da400c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a97aaa51-74ae-4b1a-860c-2927d0da400c.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/Endpoints/Orders/CreateOrderEndpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/Endpoints/Orders/CreateOrderEndpoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/MicroserviceCourse.Order.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/MicroserviceCourse.Order.Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/Endpoints/Orders/OrderEndpointExt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/Endpoints/Orders/OrderEndpointExt.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/MicroserviceCourse.Order.Api.http" beforeDir="false" afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/MicroserviceCourse.Order.Api.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Api/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Application/Features/Orders/Create/CreateOrderCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Application/Features/Orders/Create/CreateOrderCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Persistence/Migrations/20250412164954_InitialCreate.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Persistence/Migrations/20250412164954_InitialCreate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Persistence/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Application/Features/Orders/Create/CreateOrderCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Application/Features/Orders/CreateOrders/CreateOrderCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Application/Features/Orders/Create/CreateOrderCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Application/Features/Orders/CreateOrders/CreateOrderCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Application/Features/Orders/Create/CreateOrderCommandValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Application/Features/Orders/CreateOrders/CreateOrderCommandValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroserviceCourse.Order.Domain/Entities/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MicroserviceCourse.Order.Domain/Entities/Order.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

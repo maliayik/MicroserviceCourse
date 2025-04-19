@@ -6,7 +6,7 @@ using MicroserviceCourse.Order.Domain.Entities;
 using MicroserviceCourse.Shared;
 using MicroserviceCourse.Shared.Services;
 
-namespace MicroserviceCourse.Order.Application.Features.Orders.Create;
+namespace MicroserviceCourse.Order.Application.Features.Orders.CreateOrders;
 
 public class CreateOrderCommandHandler(
     IOrderRepository orderRepository,

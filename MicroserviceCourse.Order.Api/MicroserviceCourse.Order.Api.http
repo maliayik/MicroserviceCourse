@@ -6,7 +6,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "DiscountRate": 5,
+  "DiscountRate": 10,
   "Address": {
     "Line": "123 Main St",
     "Province": "Ontario",

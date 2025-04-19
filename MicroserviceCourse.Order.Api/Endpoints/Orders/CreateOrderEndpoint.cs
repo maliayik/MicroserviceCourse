@@ -1,5 +1,5 @@
 using MediatR;
-using MicroserviceCourse.Order.Application.Features.Orders.Create;
+using MicroserviceCourse.Order.Application.Features.Orders.CreateOrders;
 using MicroserviceCourse.Shared.Extensions;
 using MicroserviceCourse.Shared.Filters;
 using Microsoft.AspNetCore.Mvc;
